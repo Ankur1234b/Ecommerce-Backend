@@ -1,0 +1,13 @@
+const mongoose = require('mongoose');
+
+// Define the user schema without required fields
+const userSchema = new mongoose.Schema({
+    id: String,
+    name: String,
+    email: String,
+    phone: String,
+    password: String
+});
+
+// Export the model
+module.exports = mongoose.model("user", userSchema);
